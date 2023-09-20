@@ -7,7 +7,7 @@ Create a standard configuration file for your application logs and place it in t
 sudo nano /etc/logrotate.d/<app name>
 ```
 
-Add following tex to file
+Add following text to file
 
 ```
 /var/log/<app name>/*.log
@@ -32,7 +32,7 @@ Check last date and time of log file rotation
 sudo cat /var/lib/logrotate/status | grep 'app name'
 ```
 
-### System-independent logrotatet configuration
+### System-independent logrotate configuration
 This does not run on default system schedule and configuration file must be outside `/etc/logrotate.d/`.
 Create `logrotate.conf` in desired directory
 
@@ -40,7 +40,7 @@ Create `logrotate.conf` in desired directory
 nano <path-to-dir>/logrotate.conf
 ```
 
-Polpulate file with folllowing contents
+Populate file with folllowing contents:
 
 ```
 /<path-to-app-logs>/*.log
@@ -69,9 +69,10 @@ crontab -e
 Add following line to bottom of file
 
 ```
-0 * * * * /usr/sbin/logrotate /home/<user>/logify/logrotate.conf --state /home/<user>/logify/logrotate.state
+0 * * * * /usr/sbin/logrotate <path-to-app-dir>/logrotate.conf --state /home/<user>/logify/logrotate.state  # app sample path left here intentionally
 ```
-0 7 * * * - minutes hour day week month
+_0 7 * * * - minutes hour day week month_
+
 Save and close the modified file and observe the output below:
 
 ```
