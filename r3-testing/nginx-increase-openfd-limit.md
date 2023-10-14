@@ -1,29 +1,29 @@
-Edit or create a new file /etc/systemd/system/nginx.service.d/override.conf.
+- Edit or create a new file /etc/systemd/system/nginx.service.d/override.conf.
 
 ```
 sudo systemctl edit nginx.service
 ```
 
-Append the following:
+- Append the following:
 
 ```
 [Service]
 LimitNOFILE=65535
 ```
 
-Save and close filel. Reload disk changes for systemd
+- Save and close filel. Reload disk changes for systemd
 
 ```
 sudo systemctl daemon-reload
 ```
 
-Edit nginx.conf file
+- Edit nginx.conf file
 
 ```
 nano /etc/nginx/nginx.conf
 ```
 
-Add the following in main context of config file (outside server and events), then save and close file
+- Add the following in main context of config file (outside server and events), then save and close file
 
 ```
 ###############################################################################################################
@@ -35,13 +35,13 @@ Add the following in main context of config file (outside server and events), th
 worker_rlimit_nofile 30000;
 ```
 
-Reload nginx
+- Reload nginx
 
 ```
 systemctl restart nginx
 ```
 
-Test for new FD limits 
+- Test for new FD limits 
 
 ```
 grep -i 'Max open files' /proc/$(cat /var/run/nginx.pid)/limits
