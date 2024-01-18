@@ -1,0 +1,24 @@
+[
+    {
+      "allowedMemberTypes": [
+        "User"
+      ],
+      "description": "User",
+      "displayName": "User",
+      "id": "18d14569-c3bd-439b-9a66-3a2aee01d14f",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": null
+    },
+    {
+      "allowedMemberTypes": [
+        "User"
+      ],
+      "description": "msiam_access",
+      "displayName": "msiam_access",
+      "id": "b9632174-c057-4f7e-951b-be3adc52bfe6",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": null
+    }
+]
