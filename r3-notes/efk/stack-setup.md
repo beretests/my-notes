@@ -28,6 +28,12 @@ echo \
 
 ```
 sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+mkdir -p ~/.docker/cli-plugins/
+curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+
+chmod +x ~/.docker/cli-plugins/docker-compose
+docker compose version
 ```
 
 * Add user to docker group `sudo usermod -aG docker ${USER}`

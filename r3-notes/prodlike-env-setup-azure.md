@@ -1,4 +1,4 @@
-## Naming Convention
+## Naming Conventions
 
 ```
 $client=                                        # client identifier

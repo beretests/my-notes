@@ -11,7 +11,7 @@ sudo systemctl edit nginx.service
 LimitNOFILE=65535
 ```
 
-- Save and close filel. Reload disk changes for systemd
+- Save and close file. Reload disk changes for systemd
 
 ```
 sudo systemctl daemon-reload
