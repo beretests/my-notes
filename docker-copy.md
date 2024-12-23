@@ -10,3 +10,6 @@ docker container cp /home/ansible-controller/kpq43xu0it3qbykncd5ghmewqehx docker
 docker container cp docker-web-1:/opt/vanadium-web/storage/kp/q4/kpq43xu0it3qbykncd5ghmewqehx .
 # . means copy to current working directory
 ```
+
+
+docker container cp zabbix-zabbix-web-nginx-pgsql-1:/etc/zabbix/nginx.conf zbx_env/etc/nginx/conf.d/
